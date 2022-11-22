@@ -1,0 +1,546 @@
+/* Colors set-up */
+:root {
+  --mainBlue: #0065FC;
+  --lightBlue: #DEEBFF;
+  --grey: #D9D9D9;
+  --bgGrey: #F2F2F2;
+  --blueHover: #DEEBFF;
+  --cardspace: calc(80px / 2);
+}
+
+/* Fonts set-up */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+/* Import different style set-up */
+/* @import url("mobile.css");
+@import url("desktop.css"); */
+
+/* main CSS set-up */
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  max-width: 1400px;
+  font-family: 'Raleway', sans-serif;
+  cursor: default;
+  scroll-behavior: smooth;
+}
+html{
+  margin: auto;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+ul{
+  list-style: none;
+}
+section > *, footer {
+  margin: 0 55px;
+}
+section {
+  margin-top: 50px;
+}
+footer{
+  margin-top: 80px;
+  display: flex;
+  gap: 80px;
+  padding: 40px 70px 40px;
+}
+
+button,
+button > *,
+a,
+a > *,
+.card,
+.horizantal_card_info > *,
+.card_info > *,
+.stars > *
+{
+  cursor: pointer;
+}
+
+.title{
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.title_section {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+.sub_title_section{
+  font-size: 16px;
+  font-weight: 400;
+}
+.btn{
+  min-width: 160px;
+  height: 50px;
+  display: inline-flex;
+  gap: 5px;
+  align-items: center;
+  border: 1px solid var(--grey);
+  border-radius: 25px;
+  padding: 15px;
+  font-size: 11px;
+  font-weight: 700;
+  background: inherit;
+}
+.btn_logo{
+  width: 20px;
+  height: 22px;
+}
+.btn_none{
+  display: block;
+  border: none;
+  margin-top: 40px;
+  background: inherit;
+}
+.btn:hover{
+  background: var(--blueHover);
+}
+
+/* card set-up */
+.card_container {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-between;
+}
+.card{
+  width: calc(100% / 3 - var(--cardspace));
+  min-width: 160px;
+  border-radius: 20px;
+  background: white;
+  box-shadow: 0px 0px 10px 0px #C2C2C2;
+  border: 5px solid white;
+  overflow: hidden;
+}
+.card_img{
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+}
+.card_info{
+  padding-left: 15px;
+}
+.card_title{
+  font-size: 16px;
+  font-weight: 700;
+  margin: 10px 0;
+}
+.card_price{
+  font-size: 14px;
+  font-weight: 400;
+}
+.stars{
+  color: var(--grey);
+  display: flex;
+  font-size: 12px;
+  margin: 10px 0;
+}
+
+/* horizontal card set-up */
+.horizontal_card{
+  width: 100%;
+  height: 150px;
+}
+.horizontal_card_link{
+  display: flex;
+}
+.horizontal_card_link .card_img{
+  width: 130px;
+  height: 140px;
+  object-fit: cover;
+}
+.horizontal_card .stars{
+  margin-top: 70px;
+}
+
+/* Activities card style */
+.activities_card{
+  width: calc(100% / 4 - 30px);
+  border-radius: 20px;
+  background: white;
+  box-shadow: 0px 0px 10px 0px #C2C2C2;
+  border: 5px solid white;
+  overflow: hidden;
+}
+.activities_card_img{
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+
+/* Map Style */
+iframe{
+  border: 0;
+  margin: 0;
+  overflow: none;
+}
+.mapouter {
+  position:relative;
+  text-align:right;
+  height:500px;
+  width:auto;
+  max-width: 600px;
+  display: none; /* hide map for a toggle */
+}
+.gmap_canvas {
+  overflow:hidden;
+  background:none!important;
+  height:500px;
+  width:auto;
+}
+.gmap_canvas iframe{
+  height: 100%;
+  width: 100%;
+  border-radius: 15px;
+}
+.active{
+  display: block !important; /* Show map Class */
+}
+
+/* Style for desktop */
+nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding: 0 55px;
+}
+.logo img{
+  width: 60px;
+}
+.nav_option ul {
+  display: flex;
+}
+.nav_option ul li {
+  padding: 50px 25px;
+  border-top: 2px solid white
+}
+.nav_option ul li a{
+  font-size: 16px;
+}
+.nav_option ul li:hover {
+  border-top: 2px solid var(--mainBlue);
+  color: var(--mainBlue);
+}
+
+/* search bar style */
+.search_bar form{
+  max-width: 400px;
+  display: flex;
+  border: 1px solid var(--bgGrey);
+  border-radius: 15px;
+  margin: 20px 0;
+}
+.search_bar form > *{
+  border: none;
+}
+.search_bar form button{
+  background: var(--bgGrey);
+  padding: 1rem;
+}
+.map_btn{
+  border-radius: 15px 0 0 15px;
+  font-size: 20px;
+}
+.search_input{
+  width: 100%;
+  border-radius: 0;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 14px 16px;
+}
+.search_input::placeholder {
+    font-weight: 400;
+}
+.search_input:focus-visible{
+  outline: 0;
+}
+.search_btn{
+  border-radius: 0 15px 15px 0;
+  color: white;
+  background: var(--mainBlue) !important;
+  font-size: 18px;
+  font-weight: 700;
+}
+.search_btn::before{
+  content: 'Rechercher';
+}
+.search_btn .fas{
+  display: none;
+}
+
+.filtres {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-top: 35px;
+}
+.filtres .title{
+  margin: 0;
+}
+.filtres-btn{
+  display: flex;
+  flex-flow: wrap;
+  justify-content: flex-start;
+  gap: 20px 40px;
+}
+.filtres-btn .btn{
+  font-size: 17px;
+  font-weight: 700;
+  width: auto;
+}
+.filtres-btn .btn i{
+  color: var(--mainBlue);
+}
+
+/* logements section style */
+.info{
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.i_logo {
+  height: 10px;
+  padding-left: 1px;
+  padding-top: 1px;
+}
+.i_info {
+  font-size: 14px;
+  color: var(--mainBlue);
+  width: 22px;
+  height: 22px;
+  padding-top: 2px;
+  text-align: center;
+  border: 1px solid var(--grey);
+  border-radius: 50%;
+}
+.i_text{
+  display: inline;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.results{
+  display: flex;
+  gap: 40px;
+  margin-top: 20px;
+}
+.result{
+  width: -webkit-fill-available;
+  padding: 40px;
+}
+.result .card_container{
+  gap: 30px 0;
+}
+
+.result, .trend{
+  border-radius: 20px;
+  margin: 0;
+  background: var(--bgGrey);
+}
+.trend_title, .result_title{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.trend{
+  height: 760px;
+  max-width: 380px;
+  padding: 30px 20px 50px 20px;
+}
+.trend_icon{
+  color: var(--mainBlue);
+  font-size: 15px;
+}
+.trend .card_container{
+  height: -webkit-fill-available;
+}
+/* activities style */
+.result_activities{
+  margin-top: 30px;
+}
+
+/* Footer style */
+footer{
+  display: flex;
+  margin: 80px 55px 0;
+  gap: 80px;
+  padding: 40px 70px 40px;
+  background: var(--bgGrey);
+
+}
+footer ul li {
+  margin-bottom: 15px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+/* tablette style */
+@media only screen and (max-width: 992px) {
+  /* horizontal card set-up */
+  .horizontal_card{
+    width: calc(100% / 3 - 10px);
+  }
+  .horizontal_card_link .card_img{
+    width: 80px;
+  }
+  .horizontal_card .stars{
+    margin-top: 20px;
+  }
+
+  /* search bar style */
+  .filtres {
+    align-items: baseline;
+    gap: 5px;
+  }
+  .filtres-btn{
+    gap: 10px;
+  }
+  .filtres-btn .btn{
+    font-size: 15px;
+  }
+
+  /* logements section style */
+  .results{
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .trend{
+    height: auto;
+    max-width: none;
+    width: 100%;
+  }
+
+  /* Activities card style */
+  .result_activities{
+
+  }
+  .activities_card{
+    width: calc(100% / 4 - 20px);
+  }
+  .activities_card_img{
+    height: 250px;
+  }
+}
+
+/* Phone Style */
+@media only screen and (max-width: 768px) {
+  /* main style */
+  section > * {
+    margin: 0 20px;
+  }
+  footer {
+    margin: 0;
+  }
+
+  .card_container{
+    flex-direction: column !important;
+  }
+  .card, .activities_card {
+    width: 100% !important;
+  }
+
+  /* nav style */
+  nav{
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    padding: 0;
+  }
+  .logo{
+    padding: 20px 0;
+  }
+  .logo img{
+    display: block;
+    margin: auto;
+  }
+  .nav_option {
+    width: 100%;
+  }
+  .nav_option ul {
+    text-align: center;
+  }
+  .nav_option ul li {
+    width: 100%;
+    padding: 25px 0;
+    border-bottom: 2px solid var(--grey);
+    border-top: none;
+  }
+  .nav_option ul li:hover {
+    border-top: none;
+    border-bottom: 2px solid var(--mainBlue);
+  }
+  .nav_option a {
+    padding: 25px;
+  }
+
+  /* horizontal card set-up */
+  .horizontal_card_link .card_img{
+    width: 130px;
+  }
+  .horizontal_card .stars{
+    margin-top: 60px;
+  }
+
+  /* search bar style */
+  .filtres {
+    flex-direction: column;
+    margin-top: 35px;
+  }
+  .filtres-btn{
+    flex-flow: wrap;
+    justify-content: flex-start;
+    gap: 20px 15px;
+  }
+  .filtres-btn .btn{
+    width: calc(100% / 2 - 10px);
+  }
+
+  /* logements section style */
+  .results{
+    flex-direction: column-reverse;
+    margin: 0;
+    margin-top: 20px
+  }
+
+  .trend{
+    border-radius: 0;
+    height: auto;
+    max-width: none;
+    width: 100%;
+  }
+  .result{
+    padding: 40px 20px;
+    background: inherit;
+  }
+
+  /* Activities card style */
+  .result_activities .card_container{
+    gap: 20px;
+  }
+  .activities_card_img{
+    height: 150px;
+  }
+
+  /* Footer style */
+  footer{
+    margin-top: 50px;
+    flex-direction: column;
+    gap: 40px;
+    padding: 40px 30px 40px;
+
+  }
+  footer ul li {
+    margin-bottom: 15px;
+    font-size: 16px;
+    font-weight: 400;
+  }
+}

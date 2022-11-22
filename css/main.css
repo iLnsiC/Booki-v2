@@ -1,0 +1,545 @@
+/* Colors set-up */
+:root {
+  --mainBlue: #0065FC;
+  --lightBlue: #DEEBFF;
+  --grey: #D9D9D9;
+  --bgGrey: #F2F2F2;
+  --blueHover: #DEEBFF;
+}
+
+/* Fonts set-up */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+/* Import different style set-up */
+/* @import url("mobile.css");
+@import url("desktop.css"); */
+
+/* main CSS set-up */
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  max-width: 1400px;
+  font-family: 'Raleway', sans-serif;
+  cursor: default;
+  scroll-behavior: smooth;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+ul{
+  list-style: none;
+}
+section > * {
+  margin: 0 20px;
+}
+section {
+  margin-top: 50px;
+}
+
+button,
+button > *,
+a,
+a >*,
+.card > *,
+.vertical_card_info > *,
+.card_info > *
+{
+  cursor: pointer;
+}
+
+.title{
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.title_section {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+.sub_title_section{
+  font-size: 16px;
+  font-weight: 400;
+}
+.btn{
+  width: 160px;
+  height: 50px;
+  display: inline-flex;
+  gap: 5px;
+  align-items: center;
+  border: 1px solid var(--grey);
+  border-radius: 25px;
+  padding: 15px;
+  font-size: 11px;
+  font-weight: 700;
+  background: inherit;
+}
+.btn_logo{
+  width: 20px;
+  height: 22px;
+}
+.btn_none{
+  display: none;
+}
+.btn:hover{
+  background: var(--blueHover);
+}
+
+/* card set-up */
+.card_container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.card{
+  display: flex;
+  gap: 10px;
+  border-radius: 20px;
+  padding: 5px;
+  background: white;
+  box-shadow: 0px 0px 10px 0px #C2C2C2;
+}
+.card_img{
+  width: 40%;
+  height: auto;
+  border-radius: 20px 0 0 20px;
+  background: center / cover no-repeat url("../assets/img/hebergements/1_xlarge/annie-spratt-Eg1qcIitAuA-unsplash.jpg");
+}
+.card_title{
+  font-size: 16px;
+  font-weight: 700;
+  margin: 10px 0;
+}
+.card_price{
+  font-size: 14px;
+  font-weight: 400;
+}
+.stars{
+  display: flex;
+  margin-bottom: 5px;
+  margin-top: 50px;
+}
+.stars img{
+  width: 12px;
+  height: 12px;
+}
+
+/* vertical card set-up */
+.vertical_card {
+  flex-direction: column;
+  height: auto;
+}
+.vertical_card_img{
+  width: 100%;
+  height: 160px;
+  border-radius: 20px 20px 0 0;
+  background: center / cover no-repeat url("../assets/img/hebergements/1_xlarge/annie-spratt-Eg1qcIitAuA-unsplash.jpg");
+}
+.vertical_card_info{
+  margin-left: 15px;
+}
+.vertical_card_info .stars{
+  margin-top: 10px;
+}
+
+/* style for mobile */
+/* nav bar style */
+nav{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.logo{
+  padding: 20px 0;
+}
+.logo img{
+  width: 70px;
+  display: block;
+  margin: auto;
+}
+.nav_option {
+  width: 100%;
+}
+.nav_option ul {
+  display: flex;
+  text-align: center;
+}
+.nav_option ul li {
+  width: 100%;
+  padding: 25px 0;
+  border-bottom: 2px solid var(--grey);
+}
+.nav_option a {
+  padding: 25px;
+}
+.current{
+  color: var(--mainBlue);
+  border-bottom: 2px solid var(--mainBlue) !important;
+}
+
+/* recherche section style */
+/* Map Style */
+iframe{
+  border: 0;
+  margin: 0;
+  overflow: none;
+}
+.mapouter {
+  position:relative;
+  text-align:right;
+  height:500px;
+  width:auto;
+  max-width: 600px;
+  display: none; /* hide map for a toggle */
+}
+.gmap_canvas {
+  overflow:hidden;
+  background:none!important;
+  height:500px;
+  width:auto;
+}
+.gmap_canvas iframe{
+  height: 100%;
+  width: 100%;
+  border-radius: 15px;
+}
+.active{
+  display: block !important; /* Show map Class */
+}
+
+/* search bar style */
+.search_bar form{
+  max-width: 400px;
+  display: flex;
+  border: 1px solid var(--bgGrey);
+  border-radius: 15px;
+  margin: 20px 0;
+}
+.search_bar form > *{
+  border: none;
+}
+.search_bar form button{
+  background: var(--bgGrey);
+  padding: 1rem;
+}
+.map_btn{
+  border-radius: 15px 0 0 15px;
+}
+.search_input{
+  width: 100%;
+  border-radius: 0;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 14px 16px;
+}
+.search_input::placeholder {
+    font-weight: 400;
+}
+.search_input:focus-visible{
+  outline: 0;
+}
+.search_btn{
+  border-radius: 0 15px 15px 0;
+  color: white;
+  background: var(--mainBlue) !important;
+}
+.search_icon{
+  width: 17px;
+  height: 17px;
+}
+
+.filtres {
+  display: flex;
+  flex-direction: column;
+  margin-top: 35px;
+}
+.filtres-btn{
+  display: flex;
+  flex-flow: wrap;
+  justify-content: flex-start;
+  gap: 20px 15px;
+}
+
+/* logements section style */
+.info{
+  margin-top: 1rem;
+  display: flex;
+  gap: 10px;
+}
+.i_logo {
+  height: 10px;
+  padding-left: 1px;
+  padding-top: 1px;
+}
+.i_info {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  justify-content: center;
+  text-align: center;
+  border: 1px solid var(--grey);
+  border-radius: 50%;
+}
+.i_text{
+  display: inline;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.results{
+  margin: 0;
+  margin-top: 20px;
+}
+.trend_title, .result_title{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+.trend{
+  margin: 0;
+  background: var(--bgGrey);
+  padding: 30px 20px 50px 20px;
+}
+.trend_icon{
+  height: 15px;
+}
+
+.result{
+  margin: 0;
+  padding: 30px 20px 50px 20px;
+}
+
+/* activities section style */
+#activities .title_section {
+  margin-bottom: 25px;
+}
+.result_activities .card {
+  padding: 0;
+}
+#activities .title_section span::before{
+  content: "\a";
+  white-space: pre;
+}
+
+/* Footer style */
+footer{
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 40px 20px;
+  background: var(--bgGrey);
+}
+footer ul li {
+  margin-bottom: 15px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+/* Style for tablette */
+@media only screen and (min-width: 768px) {
+  /* main CSS for tablette */
+  section > * {
+    margin: 0 75px;
+  }
+  .btn_none{
+    display: block;
+    border: none;
+    margin-top: 40px;
+  }
+
+  /* nav css */
+  nav{
+    flex-direction: row;
+    padding: 0 75px;
+  }
+  .logo{
+    padding-top: 45px;
+  }
+  .nav_option {
+    width: auto;
+  }
+  .nav_option ul li {
+    padding: 45px 0 25px 0;
+    border-bottom: none;
+  }
+  .nav_option a {
+    padding: 45px 45px 25px 45px;
+  }
+
+  /* search bar style */
+  .search_btn::before{
+    content: 'Rechercher';
+  }
+  .search_btn{
+    font-size: 18px;
+    font-weight: 700;
+  }
+  .search_icon{
+    display: none;
+  }
+
+  .filtres {
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+  }
+  .filtres .title{
+    margin: 0;
+  }
+  .filtres-btn > *{
+    width: auto;
+    font-size: 17px;
+  }
+
+  /* card and  vertical card  set-up */
+  .card_container {
+    flex-direction: row;
+    flex-flow: wrap;
+    gap: 30px;
+  }
+  .card_container a {
+    height: fit-content;
+  }
+  .card{
+    min-width: 280px;
+  }
+  .card_img{
+    min-width: 130px;
+    width: 50%;
+  }
+
+  .vertical_card {
+    flex-direction: column;
+    height: auto;
+  }
+  .vertical_card_img{
+    width: 100%;
+    height: 160px;
+    border-radius: 20px 20px 0 0;
+    background: center / cover no-repeat url("../assets/img/hebergements/1_xlarge/annie-spratt-Eg1qcIitAuA-unsplash.jpg");
+  }
+  .vertical_card_info{
+    margin-left: 15px;
+  }
+  .vertical_card_info .stars{
+    margin-top: 10px;
+  }
+
+  /* logements section style */
+  .results{
+    display: flex;
+    gap: 55px;
+    flex-direction: column-reverse;
+    margin: 20px 75px 0 75px;
+  }
+  .trend, .result{
+    border-radius: 20px;
+    background: var(--bgGrey);
+    padding: 30px 40px 50px 40px;
+  }
+
+  /* activities section style */
+  .result_activities .card_container {
+    gap: 50px;
+  }
+  .result_activities .card {
+    min-width: 200px;
+  }
+  .result_activities .vertical_card_img {
+    height: 210px;
+  }
+  #activities .title_section span::before{
+    content: "\a";
+    white-space: inherit;
+  }
+
+  /* Footer style */
+  footer{
+    margin: 80px 75px 0;
+    flex-direction: row;
+    gap: 80px;
+    padding: 40px 70px 40px;
+  }
+
+}
+
+/* Style for desktop */
+@media only screen and (min-width: 992px) {
+  /* main CSS for tablette */
+  section > * {
+    margin: 0 55px;
+  }
+  html{
+    margin: auto;
+  }
+
+  /* card and  vertical card  set-up */
+  .card_container {
+    justify-content: space-between;
+    gap: 30px 0;
+  }
+  .card{
+    min-width: 250px;
+  }
+  .vertical_card_img{
+    height: 130px;
+  }
+
+  /* nav css */
+  nav{
+    padding: 0 55px;
+  }
+  .current {
+    border-bottom: none !important;
+    border-top: 2px solid var(--mainBlue);
+
+  }
+  .nav_option a {
+    padding: 45px 45px 25px 45px;
+  }
+
+  /* logements section style */
+  .results{
+    flex-direction: row-reverse;
+    gap: 40px;
+    margin: 20px 55px 0 55px;
+  }
+  .trend, .result{
+    padding: 40px;
+  }
+  .trend {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 380px;
+  }
+  .trend .card_container {
+    height: 100%;
+  }
+
+  /* activities section style */
+  .result_activities .card_container {
+    gap: 0;
+  }
+  .result_activities .card {
+    min-width: 300px;
+    height: 450px;
+  }
+  .result_activities .vertical_card_img {
+    height: 100%;
+  }
+
+  /* Footer style */
+  footer{
+    margin: 80px 55px 0;
+    flex-direction: row;
+    gap: 80px;
+    padding: 40px 70px 40px;
+  }
+
+}
