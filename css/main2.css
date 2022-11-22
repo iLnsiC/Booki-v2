@@ -443,6 +443,7 @@ footer ul li {
 
   .card_container{
     flex-direction: column !important;
+    gap: 20px;
   }
   .card, .activities_card {
     width: 100% !important;
