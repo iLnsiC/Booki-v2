@@ -491,6 +491,13 @@ footer ul li {
   }
 
   /* search bar style */
+  .search_btn::before{
+    content: '';
+  }
+  .search_btn .fas{
+    display: block;
+  }
+  
   .filtres {
     flex-direction: column;
     margin-top: 35px;
